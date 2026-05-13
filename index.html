@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio - Lagab Khadidja</title>
+
+<style>
+/* ===================== ROOT THEME ===================== */
+:root {
+    --bg: #f5f7fb;
+    --text: #0f172a;
+    --card: rgba(255,255,255,0.7);
+    --border: rgba(15,23,42,0.08);
+    --primary: #2563eb;
+    --muted: #64748b;
+}
+
+/* DARK MODE */
+body.dark {
+    --bg: #0b1220;
+    --text: #e5e7eb;
+    --card: rgba(30,41,59,0.6);
+    --border: rgba(255,255,255,0.08);
+    --primary: #60a5fa;
+    --muted: #94a3b8;
+}
+
+/* ===================== BASE ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s ease;
+}
+
+/* ===================== NAV ===================== */
+nav {
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(20px);
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: 700;
+}
+
+.nav-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--muted);
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* ===================== BUTTON ===================== */
+button {
+    background: var(--primary);
+    border: none;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* ===================== HERO ===================== */
+header {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+header h1 {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+header p {
+    color: var(--muted);
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* ===================== SECTIONS ===================== */
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    border-left: 4px solid var(--primary);
+    padding-left: 10px;
+}
+
+/* ===================== CARDS ===================== */
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 18px;
+    border-radius: 16px;
+    margin-bottom: 15px;
+    backdrop-filter: blur(15px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+}
+
+/* TAG */
+.tag {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(37,99,235,0.1);
+    color: var(--primary);
+    font-size: 13px;
+    margin: 5px;
+}
+
+/* FORM */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+    outline: none;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: var(--muted);
+}
+
+/* SMOOTH */
+html {
+    scroll-behavior: smooth;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="logo">Khadidja Lagab</div>
+
+    <div class="nav-links">
+        <a href="#about">À propos</a>
+        <a href="#skills">Compétences</a>
+        <a href="#projects">Projets</a>
+        <a href="#education">Études</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <button onclick="toggleTheme()">🌙</button>
+</nav>
+
+<!-- HERO -->
+<header>
+    <h1>Étudiante en Informatique</h1>
+    <p>Cycle ingénieur • Passionnée par le développement logiciel et les technologies numériques</p>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>À propos</h2>
+    <div class="card">
+        Étudiante en 2ᵉ année cycle ingénieur en Informatique à l’Université Mouloud Mammeri de Tizi-Ouzou.
+        Passionnée par les technologies numériques, sérieuse et motivée, je souhaite poursuivre mes études en France.
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h2>Compétences</h2>
+    <div class="card">
+        <span class="tag">C</span>
+        <span class="tag">C++</span>
+        <span class="tag">Python</span>
+        <span class="tag">HTML</span>
+        <span class="tag">LaTeX</span>
+        <span class="tag">Linux</span>
+        <span class="tag">Windows</span>
+        <span class="tag">Office</span>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>Projets</h2>
+
+    <div class="card">
+        <b>Mini projets universitaires</b>
+        <p>Développement de petits programmes en C et Python dans le cadre des études (algorithmes, structures de données).</p>
+    </div>
+
+    <div class="card">
+        <b>Exercices en programmation</b>
+        <p>Résolution de problèmes logiques et implémentation de solutions en C++ et Python via la formation EPITEC.</p>
+    </div>
+
+    <div class="card">
+        <b>Portfolio Web</b>
+        <p>Création d’un site web personnel présentant mon CV et mes compétences.</p>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+    <h2>Études</h2>
+
+    <div class="card">
+        <b>2025-2026</b><br>
+        Université Mouloud Mammeri — Ingénieur Informatique
+    </div>
+
+    <div class="card">
+        <b>2024</b><br>
+        Bac Mathématiques — Mention Bien
+    </div>
+
+    <div class="card">
+        <b>Formations</b><br><br>
+        <span class="tag">C++ / Python (EPITEC)</span>
+        <span class="tag">Microsoft Office</span>
+        <span class="tag">Anglais C1</span>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+
+    <div class="card">
+        <form onsubmit="send(event)">
+            <input type="text" placeholder="Nom" required>
+            <input type="email" placeholder="Email" required>
+            <textarea rows="5" placeholder="Message"></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+
+        <p style="margin-top:15px; color: var(--muted);">
+            📧 lagabkhadidja2007@gmail.com <br>
+            📍 Tizi-Ouzou, Algérie <br>
+            📞 +213 655505114
+        </p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Lagab Khadidja — Portfolio
+</footer>
+
+<script>
+function toggleTheme() {
+    document.body.classList.toggle("dark");
+}
+
+function send(e) {
+    e.preventDefault();
+    alert("Message envoyé !");
+}
+</script>
+
+</body>
+</html>
